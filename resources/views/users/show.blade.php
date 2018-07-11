@@ -15,10 +15,10 @@
                         <div class="media-body">
                             <hr>
                             <h4><strong>个人简介</strong></h4>
-                            <p>你的职业是什么，有什么爱好呢？平常都做些什么？</p>
+                            <p>{{ $user->introduction }}</p>
                             <hr>
                             <h4><strong>注册于</strong></h4>
-                            <p>January 01 2017</p>
+                            <p>{{ $user->created_at->diffForHumans() }}</p>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     暂无数据 ~_~
                 </div>
             </div>
-            
+
         </div>
     </div>
 @stop
