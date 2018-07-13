@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Handlers\ImageUploadHandler;
 use App\Models\Topic;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -65,4 +66,26 @@ class TopicsController extends Controller
 
 		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
 	}
+
+	//修改或新增 topic 支持图片上传
+    public function uploadImage(Request $request, ImageUploadHandler $uploader)
+    {
+        if($file = $request->upload_file) {
+            $result = $uploader->save($file, 'topics', Auth::id(), 1024);
+
+            if($result) {
+                return [
+                    'success' => true,
+                    'msg' => "上传成功",
+                    'file_path' => $result['path']
+                ];
+            }
+        }
+
+        return [
+            'success' => false,
+            'msg' => "上传失败",
+            'file_path' => ''
+        ];
+    }
 }
