@@ -20,6 +20,6 @@
 @endif
 
 {{-- 分页 --}}
-<div class="text-center">
+<div align="center">
     {{ $topics->render() }}
 </div>
