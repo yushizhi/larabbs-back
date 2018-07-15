@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Handlers\SlugTranslateHandler;
+use App\Jobs\TranslateSlug;
 use App\Models\Topic;
 
 // creating, created, updating, updated, saving,
@@ -15,10 +16,6 @@ class TopicObserver
         $topic->body = clean($topic->body, 'user_topic_body');
 
         $topic->excerpt = make_excerpt($topic->body);
-
-        if(! $topic->id || $topic->title !== Topic::find($topic->id)->title) {
-            $topic->slug = app(SlugTranslateHandler::class)->translate($topic->title);
-        }
     }
 
     public function creating(Topic $topic)
@@ -29,5 +26,12 @@ class TopicObserver
     public function updating(Topic $topic)
     {
         //
+    }
+
+    public function saved(Topic $topic)
+    {
+        if( ! $topic->slug) {
+            dispatch(new TranslateSlug($topic));
+        }
     }
 }
