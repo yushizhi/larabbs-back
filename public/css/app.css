@@ -8965,7 +8965,7 @@ body {
 }
 
 .topics-show-page .reply-content {
-  magrin: 6px 0;
+  margin: 6px 0;
 }
 
 .topic-reply hr {
@@ -8980,5 +8980,19 @@ body {
 .topic-reply .meta {
   font-size: .9em;
   color: #b3b3b3;
+}
+
+/* Notification badge */
+
+.notifications-badge {
+  margin-top: -2px;
+}
+
+.notifications-badge .badge-fade {
+  background-color: #E8E8E8;
+}
+
+.notifications-badge .badge-hint {
+  background-color: #d15b47 !important;
 }
 
