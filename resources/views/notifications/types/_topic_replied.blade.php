@@ -10,6 +10,10 @@
             <a href="{{ route('users.show', $notification->data['user_id']) }}">
                 {{ $notification->data['user_name'] }}
             </a>
+            评论了
+            <a href="{{ $notification->data['topic_link'] }}">
+                {{ $notification->data['topic_title'] }}
+            </a>
 
             <span class="meta pull-right" title="回复于">
                 <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
