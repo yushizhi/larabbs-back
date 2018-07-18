@@ -31,6 +31,11 @@
         @include('layouts._footer')
     </div>
 
+    <!-- Sudosu -->
+    @if (app()->isLocal() && config('app.debug'))
+        @include('sudosu::user-selector')
+    @endif
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')
