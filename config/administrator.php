@@ -64,6 +64,12 @@ return array(
             'roles',
             'permissions',
         ],
+
+        '内容管理' => [
+            'categories',
+            'topics',
+            'replies',
+        ],
     ],
 
     /*
@@ -140,6 +146,4 @@ return array(
      * @type array
      */
     'locales' => [],
-
-    'custom_routes_file' => app_path('Http/routes/administrator.php'),
 );
