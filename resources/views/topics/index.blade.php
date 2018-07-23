@@ -25,7 +25,9 @@
                     {{-- 话题列表 --}}
                     @include('topics._topic_list', ['topics' => $topics])
                     {{-- 分页  --}}
-                    {{ $topics->appends(Request::except('page'))->render() }}
+                    <div align="center">
+                        {{ $topics->appends(Request::except('page'))->render() }}
+                    </div>
                 </div>
             </div>
         </div>

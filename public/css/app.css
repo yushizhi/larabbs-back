@@ -8455,7 +8455,8 @@ body {
 /* Topic Index Page */
 
 .topics-index-page .topic-list .nav > li > a,
-.categories-show-page .topic-list .nav > li > a {
+.categories-show-page .topic-list .nav > li > a,
+.root-page .topic-list .nav > li > a {
   position: relative;
   padding: 5px 14px;
   font-size: 0.9em;
@@ -8463,29 +8464,34 @@ body {
 }
 
 .topics-index-page a,
-.categories-show-page a {
+.categories-show-page a,
+.root-page a {
   color: #444444;
   text-decoration: none;
 }
 
 .topics-index-page .meta,
-.categories-show-page .meta {
+.categories-show-page .meta,
+.root-page .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
 
 .topics-index-page .meta a,
-.categories-show-page .meta a {
+.categories-show-page .meta a,
+.root-page .meta a {
   color: #b3b3b3;
 }
 
 .topics-index-page .bage,
-.categories-show-page .bage {
+.categories-show-page .bage,
+.root-page .bage {
   background-color: #d8d8d8;
 }
 
 .topics-index-page hr,
-.categories-show-page hr {
+.categories-show-page hr,
+.root-page hr {
   marin-top: 12px;
   margin-bottom: 12px;
   border: 0;
