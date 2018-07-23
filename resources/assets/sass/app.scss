@@ -152,6 +152,12 @@ body {
             font-size: 28px;
             line-height: 38px;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 0.9em;
+        }
     }
     .meta {
         font-size: .9em;

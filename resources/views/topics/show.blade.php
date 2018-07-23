@@ -10,7 +10,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="text-center">
-                    作者： {{ $topic->user->name }}
+                    <a href="{{ route('users.show', $topic->user_id) }}">作者： {{ $topic->user->name }}</a>
                 </div>
                 <hr>
                 <div class="media">

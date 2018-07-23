@@ -8959,6 +8959,12 @@ body {
   line-height: 38px;
 }
 
+.topics-show-page .panel a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9em;
+}
+
 .topics-show-page .meta {
   font-size: .9em;
   color: #b3b3b3;
