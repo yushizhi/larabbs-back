@@ -65,7 +65,7 @@ return [
             'type' => 'image',
 
             // 图片上传必须设置图片存放路径
-            'location' => public_path() . '/uploads/images/avatars/',
+            'location' => public_path() . '/storage/images/avatars/',
         ],
         'roles' => [
             'title'      => '用户角色',

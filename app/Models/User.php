@@ -64,7 +64,7 @@ class User extends Authenticatable
     public function setAvatarAttribute($path)
     {
         if( ! starts_with($path, ['http', 'data'])){
-            $path = config('app.url') . "/uploads/images/avatars/$path";
+            $path = config('app.url') . "/storage/images/avatars/$path";
         }
 
         $this->attributes['avatar'] = $path;
